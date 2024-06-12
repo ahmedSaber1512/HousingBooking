@@ -1,0 +1,44 @@
+
+//
+model
+
+class OrderClass{
+    String? name;
+    String? uid;
+    bool? accept;
+Map toJson(){
+    return {
+        "name": name,
+        "uid":uid,
+        "accept": accept
+
+    };
+}
+}
+
+OrderClass myOrder = OrderClass()
+
+snapshot.data()['namee']
+
+FirebaseFirestore.instance.collection('orders').add(myOrder.toJson());
+
+
+List myOrders = FirebaseFirestore.instance.collection('orders')
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentState?.uid).get()
+
+String orderUid = myOrders.docs[index].uid;
+
+FirebaseFirestore.instance.collection('orders').doc(orderUid).update({
+    'accept': true
+});
+
+
+
+// status order
+
+FirebaseFirestore.instance.collection('orders')
+        .where('uid', isEqualTo: FirebaseAuth.instance.currentState?.uid).get()
+
+
+// null : pending
+// false :: true

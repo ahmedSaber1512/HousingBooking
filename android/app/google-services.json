@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994776890473",
+    "project_id": "my-project-3-378219",
+    "storage_bucket": "my-project-3-378219.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994776890473:android:e030cb923a6dc66101b6f8",
+        "android_client_info": {
+          "package_name": "com.example.housing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACEHAR3bdqnVlxn5R_U9b-DhjDcqAPKdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
